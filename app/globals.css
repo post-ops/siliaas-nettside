@@ -25,7 +25,7 @@ a {
 }
 
 .section-spacing {
-  @apply py-24 md:py-32;
+  @apply py-20 md:py-24;
 }
 
 .eyebrow {

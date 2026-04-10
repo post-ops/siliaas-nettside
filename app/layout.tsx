@@ -2,12 +2,13 @@ import type { Metadata } from "next";
 import Script from "next/script";
 import "./globals.css";
 import { AnalyticsPageview } from "@/components/analytics-pageview";
+import { SiteFooter } from "@/components/site-footer";
+import { SiteHeader } from "@/components/site-header";
 import { GA_ID } from "@/lib/analytics";
 
 export const metadata: Metadata = {
-  title: "Lilaas | Premium Industrial Control Systems",
-  description:
-    "High-precision control levers, joysticks and control systems for maritime, defense, medical and space applications."
+  title: "Lilaas | Industrial Control Systems",
+  description: "Control components for marine and industrial use."
 };
 
 export default function RootLayout({
@@ -29,7 +30,9 @@ export default function RootLayout({
           `}
         </Script>
         <AnalyticsPageview />
+        <SiteHeader />
         {children}
+        <SiteFooter />
       </body>
     </html>
   );

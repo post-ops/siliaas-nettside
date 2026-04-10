@@ -1,18 +1,18 @@
-import Link from "next/link";
+import { applicationAreas } from "@/lib/site-data";
 
 export default function ApplicationsPage() {
   return (
     <main className="section-container section-spacing">
-      <Link href="/" className="text-sm text-slate-400 hover:text-white">
-        ← Back to overview
-      </Link>
       <p className="eyebrow">Applications</p>
-      <h1 className="mt-4 text-4xl font-semibold md:text-6xl">Industries and Deployment Environments</h1>
+      <h1 className="mt-4 text-4xl font-semibold md:text-6xl">Operational environments</h1>
       <div className="mt-10 grid gap-4 md:grid-cols-2">
-        <div className="rounded-xl border border-slate-800 bg-surface p-6">Maritime bridge and deck control operations</div>
-        <div className="rounded-xl border border-slate-800 bg-surface p-6">Offshore and heavy-duty vessel environments</div>
-        <div className="rounded-xl border border-slate-800 bg-surface p-6">Defense platforms with mission-critical continuity requirements</div>
-        <div className="rounded-xl border border-slate-800 bg-surface p-6">Specialized industrial systems with complex integration demands</div>
+        {applicationAreas.map((area) => (
+          <article key={area.title} className="rounded-xl border border-slate-700 bg-surface p-6">
+            <h2 className="text-xl font-semibold">{area.title}</h2>
+            <p className="mt-3 text-sm text-slate-300">{area.whatItIs}</p>
+            <p className="mt-2 text-sm text-slate-400">Used in {area.usedIn}</p>
+          </article>
+        ))}
       </div>
     </main>
   );
