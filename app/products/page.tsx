@@ -32,12 +32,12 @@ export default async function ProductsPage({ searchParams }: ProductsPageProps) 
   return (
     <main className="section-container section-spacing">
       <p className="eyebrow">Products</p>
-      <h1 className="mt-4 text-4xl font-semibold md:text-6xl">Control components for marine and industrial use.</h1>
+      <h1 className="mt-4 text-4xl font-semibold md:text-6xl">Premium control units for critical marine operations</h1>
       <p className="mt-4 max-w-3xl text-slate-300">
-        Select a category to review product families, then open a product card for technical notes and next-step contact.
+        Select a category to compare product families, then request engineering guidance for system fit, integration scope and delivery timeline.
       </p>
       <p className="mt-2 text-sm text-slate-400">
-        Product naming aligned with provided lilaas.no references (including L01, LF70, LE90, LF120, LF180, L04, LF50, LF60).
+        Built for repeatable response, maintainability and long lifecycle performance across vessel classes.
       </p>
 
       <div className="mt-10 flex flex-wrap gap-2">
@@ -56,6 +56,12 @@ export default async function ProductsPage({ searchParams }: ProductsPageProps) 
         ))}
       </div>
       <p className="mt-4 text-sm text-slate-400">{resultLabel}</p>
+      <div className="mt-6 rounded-xl border border-cyan-800/35 bg-field p-4 text-sm text-slate-300">
+        Need help narrowing options? Share vessel type and control scope, and we recommend the most relevant product path.
+        <Link href="/contact" className="ml-1 font-medium text-link hover:text-linkHover">
+          Talk to engineering.
+        </Link>
+      </div>
 
       <div className="mt-8 grid gap-5 md:grid-cols-2">
         {filteredProducts.map((product) => {
@@ -91,7 +97,7 @@ export default async function ProductsPage({ searchParams }: ProductsPageProps) 
                 href="/contact"
                 className="mt-3 inline-block rounded-md border border-accentMid/60 px-4 py-2 text-xs font-semibold uppercase tracking-[0.08em] text-accentSoft hover:border-accent hover:text-orange-100"
               >
-                Request Quote
+                Request Engineering Quote
               </Link>
             </article>
           );
@@ -99,7 +105,7 @@ export default async function ProductsPage({ searchParams }: ProductsPageProps) 
       </div>
       <p className="mt-8 text-sm text-slate-300">Key Data: {KEY_DATA_LINE}</p>
       <Link href="/contact" className="mt-4 inline-block text-sm text-link hover:text-linkHover">
-        Request Specification Sheet
+        Request Product Specification Pack
       </Link>
     </main>
   );

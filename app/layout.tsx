@@ -7,8 +7,24 @@ import { SiteHeader } from "@/components/site-header";
 import { GA_ID } from "@/lib/analytics";
 
 export const metadata: Metadata = {
-  title: "Lilaas | Industrial Control Systems",
-  description: "Control components for marine and industrial use."
+  title: "Lilaas | Premium Marine Control Systems and Precision Mechanics",
+  description:
+    "Lilaas delivers premium marine control units, thruster control systems and precision mechanics for OEM, shipyard and offshore programs.",
+  keywords: [
+    "marine control systems",
+    "thruster control",
+    "control levers",
+    "joystick marine",
+    "precision mechanics",
+    "offshore control systems",
+    "Lilaas"
+  ],
+  openGraph: {
+    title: "Lilaas | Premium Marine Control Systems",
+    description:
+      "Engineering-led marine control systems for critical vessel operations, from concept through commissioning and support.",
+    type: "website"
+  }
 };
 
 export default function RootLayout({

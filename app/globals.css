@@ -20,6 +20,9 @@ body {
     );
   color: #f0fafc;
   font-family: Inter, Segoe UI, system-ui, -apple-system, sans-serif;
+  line-height: 1.6;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
 }
 
 a {
@@ -32,11 +35,30 @@ a {
 }
 
 .section-spacing {
-  @apply py-20 md:py-24;
+  @apply py-20 md:py-28;
 }
 
 .eyebrow {
-  @apply text-xs uppercase tracking-[0.2em] text-orange-400;
+  @apply text-xs uppercase tracking-[0.2em] text-orange-300;
+}
+
+h1,
+h2,
+h3 {
+  letter-spacing: -0.01em;
+}
+
+main section {
+  position: relative;
+}
+
+.rounded-xl,
+.rounded-2xl {
+  backdrop-filter: blur(1px);
+}
+
+a {
+  transition: color 180ms ease, border-color 180ms ease, background-color 180ms ease;
 }
 
 /* Industrial photo treatment: depth, edge definition, no “flat web” look */
@@ -50,6 +72,7 @@ a {
 
 .premium-image-frame img {
   @apply select-none;
+  filter: saturate(1.04) contrast(1.04);
 }
 
 @keyframes slideUp {

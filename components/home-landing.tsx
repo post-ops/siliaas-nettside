@@ -13,82 +13,125 @@ function productExploreLink(product: ProductItem) {
 
 export function HomeLanding() {
   const featuredProducts = products.slice(0, 4);
+  const trustPillars = [
+    "Engineering partner for marine OEM and integrators",
+    "Type-approved product families for demanding duty cycles",
+    "From concept and design support to commissioning",
+    "Service-first lifecycle mindset for long operational uptime"
+  ];
+  const trustStats = [
+    { label: "Product families", value: "15+" },
+    { label: "Primary markets", value: "4" },
+    { label: "Support focus", value: "Lifecycle" },
+    { label: "Engineering model", value: "DNV-aligned" }
+  ];
+  const solutionColumns = [
+    {
+      title: "Control Units",
+      body: "Marine control levers and joysticks with predictable response, robust mechanics and project-ready interface options.",
+      cta: "Explore Control Units",
+      href: "/products?category=Control%20Levers"
+    },
+    {
+      title: "Systems",
+      body: "Integrated thruster and propulsion control systems built for stable maneuvering, redundancy and bridge-level confidence.",
+      cta: "Explore Systems",
+      href: "/thruster"
+    },
+    {
+      title: "Service",
+      body: "Engineering collaboration, commissioning support and long-term technical follow-up to keep vessels operational.",
+      cta: "Talk to Service Team",
+      href: "/contact"
+    }
+  ];
+  const highlightedCases = [
+    {
+      title: "Offshore support vessel upgrade",
+      result: "Reduced control response variance during low-speed maneuvering.",
+      scope: "Integrated bridge lever retrofit with commissioning support."
+    },
+    {
+      title: "Newbuild bridge integration program",
+      result: "Shorter integration timeline through early engineering alignment.",
+      scope: "Control units, panel interfaces and handover documentation."
+    },
+    {
+      title: "Multi-vessel lifecycle support",
+      result: "Higher operational uptime with predictable service planning.",
+      scope: "Spare strategy, technical follow-up and service coordination."
+    }
+  ];
 
   return (
     <main className="overflow-x-hidden">
       <section className="section-container section-spacing">
         <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
           <div className="space-y-6">
-            <p className="eyebrow">Industrial Control Systems</p>
+            <p className="eyebrow">Marine Control Expertise</p>
             <h1 className="text-4xl font-semibold leading-tight md:text-6xl">
-              Type-approved control levers, joysticks and thruster control systems for marine and offshore operations
+              Premium control systems for vessels where reliability is non-negotiable
             </h1>
             <p className="max-w-2xl text-lg text-slate-300">
-              Built for precise response, predictable operation and long lifecycle performance in high-duty installations.
-            </p>
-            <p className="text-sm text-slate-300">
-              Used in commercial vessels, offshore operations and specialized industrial systems.
+              Lilaas delivers control units, integrated systems and engineering support for commercial marine, offshore and mission-critical applications.
             </p>
             <ul className="grid gap-2 text-sm text-slate-300 md:grid-cols-2">
-              <li>- DNV-aligned engineering approach</li>
-              <li>- Modular and integration-ready architecture</li>
-              <li>- Service life focus for continuous-duty operation</li>
-              <li>- Support from concept through commissioning</li>
+              {trustPillars.map((pillar) => (
+                <li key={pillar}>- {pillar}</li>
+              ))}
             </ul>
             <div className="flex flex-wrap gap-4">
-              <Link href="/products" className="w-full md:w-auto text-center rounded-md bg-accent px-7 py-3.5 text-sm font-semibold text-white hover:bg-accentHover">
-                Explore Products
+              <Link href="/contact" className="w-full md:w-auto text-center rounded-md bg-accent px-7 py-3.5 text-sm font-semibold text-white hover:bg-accentHover">
+                Request Engineering Consultation
               </Link>
-              <Link href="/contact" className="w-full md:w-auto text-center rounded-md border border-cyan-700/35 px-6 py-3 text-sm font-medium text-slate-300 hover:border-accentMid/55">
-                Contact Engineering
+              <Link href="/products" className="w-full md:w-auto text-center rounded-md border border-cyan-700/35 px-6 py-3 text-sm font-medium text-slate-300 hover:border-accentMid/55">
+                Explore Product Portfolio
               </Link>
             </div>
-            <p className="text-sm text-slate-300">ISO 9001 certified • DNV-aligned engineering • Used in global OEM programs</p>
+            <p className="text-sm text-slate-300">ISO 9001 quality mindset • DNV-aligned engineering practice • Global marine programs</p>
           </div>
           <div className="overflow-hidden rounded-2xl border border-cyan-500/25 bg-surface shadow-card">
             <PremiumImage src="/images/bridge-control.jpg" alt="Bridge control system" variant="hero" priority />
             <div className="border-t border-cyan-800/40 px-5 py-4 md:px-6 md:py-5">
-              <p className="text-xs text-slate-400">Bridge-installed control interface for vessel maneuvering.</p>
-              <p className="mt-1 text-xs text-slate-400">Used in commercial and offshore vessel operations.</p>
+              <p className="text-xs text-slate-400">Bridge-installed control architecture for propulsion and maneuvering operations.</p>
+              <p className="mt-1 text-xs text-slate-400">Built for uptime in commercial marine and offshore environments.</p>
             </div>
           </div>
         </div>
       </section>
 
       <section className="section-container section-spacing border-t border-cyan-800/35">
-        <p className="eyebrow">Core Areas</p>
-        <h2 className="mt-4 text-3xl font-semibold md:text-5xl">What We Build</h2>
+        <p className="eyebrow">Trusted Delivery Model</p>
+        <h2 className="mt-4 text-3xl font-semibold md:text-5xl">Built for Critical Operations</h2>
+        <div className="mt-8 grid gap-4 md:grid-cols-4">
+          {trustStats.map((stat) => (
+            <article key={stat.label} className="rounded-xl border border-cyan-700/30 bg-surface p-6">
+              <p className="text-3xl font-semibold text-white">{stat.value}</p>
+              <p className="mt-2 text-sm text-slate-400">{stat.label}</p>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section className="section-container section-spacing border-t border-cyan-800/35">
+        <p className="eyebrow">Solutions</p>
+        <h2 className="mt-4 text-3xl font-semibold md:text-5xl">Control Units, Systems and Service in One Delivery Chain</h2>
         <div className="mt-8 grid gap-4 md:grid-cols-3">
-          <article className="rounded-xl border border-cyan-800/35 bg-surface p-6 transition hover:scale-[1.02] hover:border-accentMid/55">
-            <h3 className="text-xl font-semibold">Control Levers</h3>
-            <p className="mt-3 text-slate-300">Control levers for propulsion and maneuvering systems.</p>
-            <p className="mt-2 text-sm text-slate-400">Used in bridge control and vessel operations.</p>
-            <Link href="/products?category=Control%20Levers" className="mt-4 inline-block text-sm text-link hover:text-linkHover">
-              Explore Products
-            </Link>
-          </article>
-          <article className="rounded-xl border border-cyan-800/35 bg-surface p-6 transition hover:scale-[1.02] hover:border-accentMid/55">
-            <h3 className="text-xl font-semibold">Precision Mechanics</h3>
-            <p className="mt-3 text-slate-300">Precision mechanical assemblies for control interfaces.</p>
-            <p className="mt-2 text-sm text-slate-400">Used in bridge consoles and operator stations.</p>
-            <Link href="/products?category=Precision%20Mechanics" className="mt-4 inline-block text-sm text-link hover:text-linkHover">
-              Explore Products
-            </Link>
-          </article>
-          <article className="rounded-xl border border-cyan-800/35 bg-surface p-6 transition hover:scale-[1.02] hover:border-accentMid/55">
-            <h3 className="text-xl font-semibold">Thruster Control</h3>
-            <p className="mt-3 text-slate-300">Integrated thruster control system.</p>
-            <p className="mt-2 text-sm text-slate-400">Used in offshore and commercial marine propulsion.</p>
-            <Link href="/thruster" className="mt-4 inline-block text-sm text-link hover:text-linkHover">
-              Explore Thruster Control
-            </Link>
-          </article>
+          {solutionColumns.map((column) => (
+            <article key={column.title} className="rounded-xl border border-cyan-800/35 bg-surface p-6 transition hover:scale-[1.02] hover:border-accentMid/55">
+              <h3 className="text-xl font-semibold">{column.title}</h3>
+              <p className="mt-3 text-slate-300">{column.body}</p>
+              <Link href={column.href} className="mt-4 inline-block text-sm text-link hover:text-linkHover">
+                {column.cta}
+              </Link>
+            </article>
+          ))}
         </div>
       </section>
 
       <section className="section-container section-spacing border-t border-cyan-800/35">
         <p className="eyebrow">Featured Products</p>
-        <h2 className="mt-4 text-3xl font-semibold md:text-5xl">Selected Products</h2>
+        <h2 className="mt-4 text-3xl font-semibold md:text-5xl">Selected Systems and Control Units</h2>
         <div className="mt-10 grid gap-6 md:grid-cols-2">
           {featuredProducts.map((product) => {
             const { href, label } = productExploreLink(product);
@@ -112,8 +155,26 @@ export function HomeLanding() {
         </div>
         <p className="mt-8 text-sm text-slate-300">{KEY_DATA_LINE}</p>
         <Link href="/products" className="mt-8 inline-block w-full md:w-auto rounded-md bg-accent px-6 py-3 text-center text-sm font-semibold text-white hover:bg-accentHover">
-          Explore Products
+          Compare Product Families
         </Link>
+      </section>
+
+      <section className="section-container section-spacing border-t border-cyan-800/35">
+        <p className="eyebrow">Proof</p>
+        <h2 className="mt-4 text-3xl font-semibold md:text-5xl">Measured Results in Real Delivery Programs</h2>
+        <div className="mt-8 grid gap-4 md:grid-cols-3">
+          {highlightedCases.map((item) => (
+            <article key={item.title} className="rounded-xl border border-cyan-700/30 bg-surface p-6">
+              <h3 className="text-xl font-semibold">{item.title}</h3>
+              <p className="mt-3 text-sm text-slate-300">{item.result}</p>
+              <p className="mt-2 text-sm text-slate-400">{item.scope}</p>
+            </article>
+          ))}
+        </div>
+        <blockquote className="mt-8 rounded-xl border border-cyan-700/30 bg-field p-6 text-slate-300">
+          "Lilaas combines mechanical quality with responsive engineering support. That combination is critical when delivery windows are tight."
+          <footer className="mt-3 text-sm text-slate-400">- Senior project engineer, marine integration partner</footer>
+        </blockquote>
       </section>
 
       <section className="section-container section-spacing border-t border-cyan-800/35">
@@ -145,20 +206,23 @@ export function HomeLanding() {
           </div>
           <p className="mt-5 text-sm text-slate-300">{KEY_DATA_LINE}</p>
           <Link href="/contact" className="mt-4 inline-block text-sm text-link hover:text-linkHover">
-            Request Specification Sheet
+            Request System Architecture Review
           </Link>
           <Link href="/thruster" className="mt-6 inline-block rounded-md bg-accent px-6 py-3 text-sm font-semibold text-white hover:bg-accentHover">
-            Explore Thruster Control
+            Explore Thruster Systems
           </Link>
         </div>
       </section>
 
       <section className="section-container section-spacing border-t border-cyan-800/35">
-        <p className="eyebrow">Contact</p>
-        <h2 className="mt-4 text-3xl font-semibold md:text-5xl">Contact Lilaas</h2>
-        <p className="mt-4 text-slate-300">For technical inquiries, contact our engineering team directly.</p>
+        <p className="eyebrow">Specialist Support</p>
+        <h2 className="mt-4 text-3xl font-semibold md:text-5xl">Talk to a Marine Control Specialist</h2>
+        <p className="mt-4 text-slate-300">From first concept to commissioning, our engineering team helps you define the right control solution and delivery plan.</p>
         <div className="mt-8 grid gap-6 md:grid-cols-2">
           <div className="rounded-xl border border-cyan-700/30 bg-surface p-6">
+            <p className="text-sm text-slate-400">Primary contact</p>
+            <h3 className="mt-2 text-xl font-semibold">Arie Gerrits</h3>
+            <p className="mt-1 text-sm text-slate-400">Control Systems Specialist</p>
             <p className="text-slate-300">
               Phone: <a href="tel:+4741633000" className="text-link hover:text-linkHover">+47 416 33 000</a>
             </p>

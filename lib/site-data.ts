@@ -1,5 +1,5 @@
 /** Key data row — use site-wide for consistency (• separators, °C). */
-export const KEY_DATA_LINE = ">10M cycles • IP67 • -40°C to +85°C • Dual-channel output";
+export const KEY_DATA_LINE = "Engineered for lifecycle reliability • IP67 protection • -40°C to +85°C • Redundancy-ready output";
 
 export type ProductItem = {
   slug: string;
@@ -143,22 +143,22 @@ export const products: ProductItem[] = [
 export const applicationAreas = [
   {
     title: "Maritime",
-    whatItIs: "Control interfaces for bridge and propulsion systems.",
-    usedIn: "Commercial shipping and coastal operations."
+    whatItIs: "Control architecture for bridge operations, propulsion and maneuvering.",
+    usedIn: "Commercial shipping, offshore support fleets and specialized vessel classes."
   },
   {
     title: "Defence",
-    whatItIs: "Control hardware for mission-critical platforms.",
-    usedIn: "Surface vessels and land-based control stations."
+    whatItIs: "Robust control hardware for mission-critical operational environments.",
+    usedIn: "Naval surface vessels and defense-related control stations."
   },
   {
     title: "Medical",
-    whatItIs: "Precision input mechanics for controlled equipment.",
-    usedIn: "Surgical and diagnostic systems."
+    whatItIs: "Precision mechanics for interfaces requiring controlled and repeatable input.",
+    usedIn: "Surgical, diagnostic and specialized medical equipment systems."
   },
   {
     title: "Space",
-    whatItIs: "Control components for low-tolerance assemblies.",
-    usedIn: "Satellite and ground support equipment."
+    whatItIs: "High-precision mechanical control components for low-tolerance assemblies.",
+    usedIn: "Satellite-adjacent systems and advanced ground support equipment."
   }
 ];
