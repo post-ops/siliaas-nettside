@@ -27,10 +27,10 @@ export default async function ProductsPage({ searchParams }: ProductsPageProps) 
   const params = await searchParams;
   const activeCategory = resolveCategory(params.category);
   const filteredProducts = products.filter((product) => activeCategory === "All" || product.category === activeCategory);
-  const resultLabel = `${filteredProducts.length} product${filteredProducts.length === 1 ? "" : "s"} shown`;
+  const resultLabel = `${filteredProducts.length} product${filteredProducts.length === 1 ? "" : "s"} available`;
 
   return (
-    <main className="section-container section-spacing">
+    <main className="section-container section-spacing lively-section">
       <p className="eyebrow">Products</p>
       <h1 className="mt-4 text-4xl font-semibold md:text-6xl">Premium control units for critical marine operations</h1>
       <p className="mt-4 max-w-3xl text-slate-300">
@@ -63,7 +63,7 @@ export default async function ProductsPage({ searchParams }: ProductsPageProps) 
         </Link>
       </div>
 
-      <div className="mt-8 grid gap-5 md:grid-cols-2">
+      <div className="mt-8 grid gap-5 md:grid-cols-2 lively-grid">
         {filteredProducts.map((product) => {
           const { href, label } = productExploreLink(product);
           return (

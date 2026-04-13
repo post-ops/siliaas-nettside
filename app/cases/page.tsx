@@ -7,26 +7,26 @@ const cases = [
     image: "/images/thruster-system.jpg",
     problem: "Operator inconsistency during docking under variable sea states.",
     solution: "Calibrated control response and redundant sensing architecture.",
-    outcome: "Reduced operator error and improved maneuvering predictability."
+    outcome: "Improved maneuvering precision during low-speed critical operations."
   },
   {
     title: "Offshore Command Integration",
     image: "/images/offshore-control.jpg",
     problem: "Control instability in high-duty offshore operations.",
     solution: "Custom joystick and console integration tuned to duty profile.",
-    outcome: "Lower operational uncertainty and higher continuity."
+    outcome: "Higher continuity and confidence during heavy-duty offshore operations."
   }
 ];
 
 export default function CasesPage() {
   return (
-    <main className="section-container section-spacing">
+    <main className="section-container section-spacing lively-section">
       <Link href="/" className="text-sm text-slate-400 hover:text-orange-200">
         ← Back to overview
       </Link>
       <p className="eyebrow">Case Studies</p>
-      <h1 className="mt-4 text-4xl font-semibold md:text-6xl">Real-world Applications</h1>
-      <div className="mt-10 grid gap-6 md:grid-cols-2">
+      <h1 className="mt-4 text-4xl font-semibold md:text-6xl">Real Delivery Programs</h1>
+      <div className="mt-10 grid gap-6 md:grid-cols-2 lively-grid">
         {cases.map((c) => (
           <article key={c.title} className="rounded-xl border border-cyan-800/35 bg-surface p-6">
             <h2 className="text-2xl font-semibold">{c.title}</h2>

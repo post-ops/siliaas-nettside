@@ -14,13 +14,13 @@ const outputs = [
 
 export default function ProcessPage() {
   return (
-    <main className="section-container section-spacing">
+    <main className="section-container section-spacing lively-section">
       <Link href="/" className="text-sm text-slate-400 hover:text-orange-200">
         ← Back to overview
       </Link>
       <p className="eyebrow">Engagement</p>
-      <h1 className="mt-4 text-4xl font-semibold md:text-6xl">How to Engage</h1>
-      <div className="mt-10 grid gap-4 md:grid-cols-3">
+      <h1 className="mt-4 text-4xl font-semibold md:text-6xl">How Collaboration Starts</h1>
+      <div className="mt-10 grid gap-4 md:grid-cols-3 lively-grid">
         {steps.map((step, i) => (
           <div key={step} className="rounded-xl border border-cyan-800/35 bg-surface p-6">
             <p className="text-xs uppercase tracking-[0.2em] text-slate-400">Step {i + 1}</p>
@@ -28,8 +28,8 @@ export default function ProcessPage() {
           </div>
         ))}
       </div>
-      <h2 className="mt-12 text-2xl font-semibold md:text-3xl">What you get</h2>
-      <div className="mt-6 grid gap-4 md:grid-cols-2">
+      <h2 className="mt-12 text-2xl font-semibold md:text-3xl">What you receive in the first phase</h2>
+      <div className="mt-6 grid gap-4 md:grid-cols-2 lively-grid">
         {outputs.map((item) => (
           <div key={item} className="rounded-xl border border-cyan-800/35 bg-surface p-6">
             {item}

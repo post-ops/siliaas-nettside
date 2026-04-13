@@ -3,19 +3,19 @@ import { PremiumImage } from "@/components/premium-image";
 
 export default function EngineeringPage() {
   return (
-    <main className="section-container section-spacing">
+    <main className="section-container section-spacing lively-section">
       <Link href="/" className="text-sm text-slate-400 hover:text-orange-200">
         ← Back to overview
       </Link>
       <p className="eyebrow">Engineering</p>
-      <h1 className="mt-4 text-4xl font-semibold md:text-6xl">Engineering Depth</h1>
+      <h1 className="mt-4 text-4xl font-semibold md:text-6xl">Engineering architecture built for uptime</h1>
       <div className="mt-8 rounded-xl border border-cyan-800/35 bg-surface p-6">
         <PremiumImage src="/images/thruster-system.jpg" alt="Thruster control system overview" variant="section" />
         <p className="mt-3 text-sm text-slate-400">
           Thruster control system overview with modular architecture and redundant control network.
         </p>
       </div>
-      <div className="mt-8 grid gap-4 md:grid-cols-2">
+      <div className="mt-8 grid gap-4 md:grid-cols-2 lively-grid">
         <div className="rounded-xl border border-cyan-800/35 bg-surface p-6">
           <p className="text-sm font-semibold text-white">Hardware architecture</p>
           <ul className="mt-3 space-y-1 text-sm text-slate-300">
@@ -49,8 +49,8 @@ export default function EngineeringPage() {
           </ul>
         </div>
       </div>
-      <div className="mt-10 rounded-xl border border-cyan-800/35 bg-surface p-6">
-        <p className="text-lg font-semibold text-white">What this means in practice</p>
+      <div className="mt-10 rounded-xl border border-cyan-800/35 bg-surface p-6 lively-section">
+        <p className="text-lg font-semibold text-white">Operational impact</p>
         <ul className="mt-3 space-y-1 text-sm text-slate-300">
           <li>- Reduced operator error in critical operations</li>
           <li>- Predictable system behavior under load</li>

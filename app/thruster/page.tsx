@@ -4,39 +4,41 @@ import { KEY_DATA_LINE } from "@/lib/site-data";
 
 export default function ThrusterPage() {
   return (
-    <main className="section-container section-spacing">
+    <main className="section-container section-spacing lively-section">
       <p className="eyebrow">Thruster Control</p>
       <h1 className="mt-4 text-4xl font-semibold md:text-6xl">Thruster Control Systems</h1>
-      <p className="mt-4 max-w-3xl text-slate-300">Integrated thruster control systems for propulsion and maneuvering.</p>
+      <p className="mt-4 max-w-3xl text-slate-300">
+        Integrated control architecture for propulsion and maneuvering in operations where response stability and redundancy are essential.
+      </p>
 
-      <section className="mt-10 rounded-xl border border-cyan-700/30 bg-surface p-6">
+      <section className="mt-10 rounded-xl border border-cyan-700/30 bg-surface p-6 lively-section">
         <h2 className="text-2xl font-semibold">System Overview</h2>
         <div className="mt-6">
           <PremiumImage src="/images/thruster-system.jpg" alt="Thruster control overview" variant="section" />
         </div>
       </section>
 
-      <section className="mt-8 grid gap-4 md:grid-cols-2">
+      <section className="mt-8 grid gap-4 md:grid-cols-2 lively-grid">
         <article className="rounded-xl border border-cyan-700/30 bg-surface p-5">
-          <h3 className="text-xl font-semibold">System Overview</h3>
+          <h3 className="text-xl font-semibold">Core Architecture</h3>
           <ul className="mt-3 space-y-2 text-slate-300">
-            <li>- Control interface</li>
-            <li>- Signal processing</li>
-            <li>- Redundant outputs</li>
-            <li>- Integration with propulsion</li>
+            <li>- Operator control interface with calibrated response</li>
+            <li>- Fault-aware signal processing</li>
+            <li>- Redundant command outputs</li>
+            <li>- Integration with propulsion and automation layers</li>
           </ul>
         </article>
         <article className="rounded-xl border border-cyan-700/30 bg-surface p-5">
-          <h3 className="text-xl font-semibold">Typical Use</h3>
+          <h3 className="text-xl font-semibold">Operational Fit</h3>
           <ul className="mt-3 space-y-2 text-slate-300">
-            <li>- Offshore vessels</li>
-            <li>- Dynamic positioning</li>
-            <li>- High-load maneuvering</li>
+            <li>- Offshore support vessels</li>
+            <li>- Dynamic positioning operations</li>
+            <li>- High-load maneuvering in constrained waters</li>
           </ul>
         </article>
       </section>
 
-      <section className="mt-5 grid gap-4 md:grid-cols-2">
+      <section className="mt-5 grid gap-4 md:grid-cols-2 lively-grid">
         <article className="rounded-xl border border-cyan-700/30 bg-surface p-6">
           <h3 className="text-xl font-semibold">Architecture</h3>
           <ul className="mt-3 space-y-2 text-slate-300">
@@ -55,7 +57,7 @@ export default function ThrusterPage() {
         </article>
       </section>
 
-      <section className="mt-8 rounded-xl border border-cyan-700/30 bg-surface p-6">
+      <section className="mt-8 rounded-xl border border-cyan-700/30 bg-surface p-6 lively-section">
         <h3 className="text-xl font-semibold">Why It Matters</h3>
         <ul className="mt-3 space-y-2 text-slate-300">
           <li>- Reduces variation in operator input response</li>
@@ -69,12 +71,12 @@ export default function ThrusterPage() {
 
       <p className="mt-8 text-sm text-slate-300">Key Data: {KEY_DATA_LINE}</p>
       <Link href="/contact" className="mt-4 inline-block text-sm text-link hover:text-linkHover">
-        Request Specification Sheet
+        Request Thruster Specification Sheet
       </Link>
 
       <div className="mt-8">
         <Link href="/contact" className="inline-block w-full md:w-auto rounded-md bg-accent px-6 py-3 text-center text-sm font-semibold text-white hover:bg-accentHover">
-          Contact Engineering
+          Book Thruster Engineering Call
         </Link>
       </div>
     </main>

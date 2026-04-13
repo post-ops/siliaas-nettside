@@ -85,3 +85,23 @@ a {
     opacity: 1;
   }
 }
+
+@keyframes fadeRise {
+  from {
+    transform: translateY(18px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.lively-section {
+  animation: fadeRise 680ms ease both;
+}
+
+.lively-grid > * {
+  animation: fadeRise 560ms ease both;
+  animation-delay: var(--delay, 0ms);
+}

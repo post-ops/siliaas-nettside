@@ -56,7 +56,8 @@ async function loadMedia(): Promise<MediaItem[]> {
   const items: MediaItem[] = [];
   const curatedByHash = new Map<string, { title: string; verification: MediaItem["verification"] }>();
 
-  const curatedFiles = (await readdir(folders[0].dir))
+  const curatedDirFiles = await readdir(folders[0].dir).catch(() => []);
+  const curatedFiles = curatedDirFiles
     .filter((file) => /\.(png|jpg|jpeg|webp)$/i.test(file))
     .sort((a, b) => a.localeCompare(b));
 
@@ -68,7 +69,7 @@ async function loadMedia(): Promise<MediaItem[]> {
   }
 
   for (const folder of folders) {
-    const files = await readdir(folder.dir);
+    const files = await readdir(folder.dir).catch(() => []);
     const imageFiles = files.filter((file) => /\.(png|jpg|jpeg|webp)$/i.test(file)).sort((a, b) => a.localeCompare(b));
 
     for (let index = 0; index < imageFiles.length; index += 1) {
