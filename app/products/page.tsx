@@ -20,7 +20,7 @@ export default function ProductsPage() {
 
       <div className="mt-10 flex flex-wrap gap-2">
         {categories.map((category) => (
-          <span key={category} className="rounded-full border border-slate-700 bg-slate-900/80 px-4 py-1.5 text-sm text-slate-300">
+          <span key={category} className="rounded-full border border-cyan-700/30 bg-field/90 px-4 py-1.5 text-sm text-slate-300">
             {category}
           </span>
         ))}
@@ -30,7 +30,7 @@ export default function ProductsPage() {
         {products.map((product) => {
           const { href, label } = productExploreLink(product);
           return (
-            <article key={product.name} id={product.slug} className="scroll-mt-28 rounded-xl border border-slate-700 bg-surface p-5">
+            <article key={product.name} id={product.slug} className="scroll-mt-28 rounded-xl border border-cyan-700/30 bg-surface p-5">
               <PremiumImage src={product.image} alt={product.name} variant="product" />
               <h2 className="mt-4 text-xl font-semibold">{product.name}</h2>
               <p className="mt-3 text-sm text-slate-300">{product.whatItIs}</p>
@@ -40,7 +40,7 @@ export default function ProductsPage() {
                   <li key={spec}>{spec}</li>
                 ))}
               </ul>
-              <Link href={href} className="mt-4 inline-block text-sm text-blue-300 hover:text-blue-200">
+              <Link href={href} className="mt-4 inline-block text-sm text-link hover:text-linkHover">
                 {label}
               </Link>
             </article>
@@ -48,7 +48,7 @@ export default function ProductsPage() {
         })}
       </div>
       <p className="mt-8 text-sm text-slate-300">Key Data: {KEY_DATA_LINE}</p>
-      <a href="#" className="mt-4 inline-block text-sm text-blue-300 hover:text-blue-200">
+      <a href="#" className="mt-4 inline-block text-sm text-link hover:text-linkHover">
         Download Specification Sheet
       </a>
     </main>

@@ -21,14 +21,14 @@ const cases = [
 export default function CasesPage() {
   return (
     <main className="section-container section-spacing">
-      <Link href="/" className="text-sm text-slate-400 hover:text-white">
+      <Link href="/" className="text-sm text-slate-400 hover:text-orange-200">
         ← Back to overview
       </Link>
       <p className="eyebrow">Case Studies</p>
       <h1 className="mt-4 text-4xl font-semibold md:text-6xl">Real-world Applications</h1>
       <div className="mt-10 grid gap-6 md:grid-cols-2">
         {cases.map((c) => (
-          <article key={c.title} className="rounded-xl border border-slate-800 bg-surface p-6">
+          <article key={c.title} className="rounded-xl border border-cyan-800/35 bg-surface p-6">
             <h2 className="text-2xl font-semibold">{c.title}</h2>
             <div className="mt-4">
               <PremiumImage src={c.image} alt={c.title} variant="product" />

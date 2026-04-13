@@ -10,8 +10,15 @@ html,
 body {
   margin: 0;
   padding: 0;
-  background: radial-gradient(circle at 20% 20%, #121f35 0%, #080c12 45%, #06090f 100%);
-  color: #f3f7ff;
+  background: radial-gradient(
+      circle at 18% 12%,
+      #1a5f7a 0%,
+      #0f4a63 22%,
+      #0a3045 48%,
+      #061e2d 78%,
+      #041520 100%
+    );
+  color: #f0fafc;
   font-family: Inter, Segoe UI, system-ui, -apple-system, sans-serif;
 }
 
@@ -29,15 +36,16 @@ a {
 }
 
 .eyebrow {
-  @apply text-xs uppercase tracking-[0.2em] text-blue-300;
+  @apply text-xs uppercase tracking-[0.2em] text-orange-400;
 }
 
 /* Industrial photo treatment: depth, edge definition, no “flat web” look */
 .premium-image-frame {
-  @apply rounded-xl bg-slate-950;
+  @apply rounded-xl bg-field;
   box-shadow:
-    0 28px 56px -14px rgba(0, 0, 0, 0.58),
-    inset 0 0 0 1px rgba(255, 255, 255, 0.07);
+    0 28px 56px -14px rgba(2, 20, 32, 0.55),
+    inset 0 0 0 1px rgba(56, 189, 248, 0.12),
+    inset 0 -1px 0 0 rgba(249, 115, 22, 0.12);
 }
 
 .premium-image-frame img {

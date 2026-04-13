@@ -9,7 +9,7 @@ export default function ThrusterPage() {
       <h1 className="mt-4 text-4xl font-semibold md:text-6xl">Thruster Control Systems</h1>
       <p className="mt-4 max-w-3xl text-slate-300">Integrated thruster control systems for propulsion and maneuvering.</p>
 
-      <section className="mt-10 rounded-xl border border-slate-700 bg-surface p-6">
+      <section className="mt-10 rounded-xl border border-cyan-700/30 bg-surface p-6">
         <h2 className="text-2xl font-semibold">System Overview</h2>
         <div className="mt-6">
           <PremiumImage src="/images/thruster-system.jpg" alt="Thruster control overview" variant="section" />
@@ -17,7 +17,7 @@ export default function ThrusterPage() {
       </section>
 
       <section className="mt-8 grid gap-4 md:grid-cols-2">
-        <article className="rounded-xl border border-slate-700 bg-surface p-5">
+        <article className="rounded-xl border border-cyan-700/30 bg-surface p-5">
           <h3 className="text-xl font-semibold">System Overview</h3>
           <ul className="mt-3 space-y-2 text-slate-300">
             <li>- Control interface</li>
@@ -26,7 +26,7 @@ export default function ThrusterPage() {
             <li>- Integration with propulsion</li>
           </ul>
         </article>
-        <article className="rounded-xl border border-slate-700 bg-surface p-5">
+        <article className="rounded-xl border border-cyan-700/30 bg-surface p-5">
           <h3 className="text-xl font-semibold">Typical Use</h3>
           <ul className="mt-3 space-y-2 text-slate-300">
             <li>- Offshore vessels</li>
@@ -37,7 +37,7 @@ export default function ThrusterPage() {
       </section>
 
       <section className="mt-5 grid gap-4 md:grid-cols-2">
-        <article className="rounded-xl border border-slate-700 bg-surface p-6">
+        <article className="rounded-xl border border-cyan-700/30 bg-surface p-6">
           <h3 className="text-xl font-semibold">Architecture</h3>
           <ul className="mt-3 space-y-2 text-slate-300">
             <li>- Dual command paths</li>
@@ -45,7 +45,7 @@ export default function ThrusterPage() {
             <li>- Interface points for vessel automation</li>
           </ul>
         </article>
-        <article className="rounded-xl border border-slate-700 bg-surface p-6">
+        <article className="rounded-xl border border-cyan-700/30 bg-surface p-6">
           <h3 className="text-xl font-semibold">Where It Is Used</h3>
           <ul className="mt-3 space-y-2 text-slate-300">
             <li>- Offshore support vessels</li>
@@ -55,22 +55,25 @@ export default function ThrusterPage() {
         </article>
       </section>
 
-      <section className="mt-8 rounded-xl border border-slate-700 bg-surface p-6">
+      <section className="mt-8 rounded-xl border border-cyan-700/30 bg-surface p-6">
         <h3 className="text-xl font-semibold">Why It Matters</h3>
         <ul className="mt-3 space-y-2 text-slate-300">
           <li>- Reduces variation in operator input response</li>
           <li>- Supports safer vessel handling in constrained operations</li>
           <li>- Improves control continuity under demanding duty cycles</li>
         </ul>
+        <div className="mt-6">
+          <PremiumImage src="/images/library/asset-09.png" alt="Offshore vessel operation" variant="section" />
+        </div>
       </section>
 
       <p className="mt-8 text-sm text-slate-300">Key Data: {KEY_DATA_LINE}</p>
-      <a href="#" className="mt-4 inline-block text-sm text-blue-300 hover:text-blue-200">
+      <a href="#" className="mt-4 inline-block text-sm text-link hover:text-linkHover">
         Download Specification Sheet
       </a>
 
       <div className="mt-8">
-        <Link href="/contact" className="inline-block w-full md:w-auto rounded-md bg-accent px-6 py-3 text-center text-sm font-semibold text-white hover:bg-blue-500">
+        <Link href="/contact" className="inline-block w-full md:w-auto rounded-md bg-accent px-6 py-3 text-center text-sm font-semibold text-white hover:bg-accentHover">
           Contact Engineering
         </Link>
       </div>

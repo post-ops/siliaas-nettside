@@ -8,13 +8,17 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        background: "#080c12",
-        surface: "#0f1724",
-        accent: "#2f7cf6",
-        muted: "#93a4bf"
+        background: "#061e2d",
+        surface: "#0f3d52",
+        field: "#0a2c3f",
+        accent: "#f97316",
+        accentHover: "#ea580c",
+        link: "#7dd3fc",
+        linkHover: "#fdba74",
+        muted: "#9ec9dc"
       },
       boxShadow: {
-        card: "0 20px 40px rgba(2, 8, 20, 0.35)"
+        card: "0 22px 48px rgba(4, 30, 45, 0.45), 0 0 0 1px rgba(56, 189, 248, 0.06)"
       }
     }
   },
