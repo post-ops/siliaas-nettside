@@ -27,11 +27,15 @@ export default async function ProductsPage({ searchParams }: ProductsPageProps) 
   const params = await searchParams;
   const activeCategory = resolveCategory(params.category);
   const filteredProducts = products.filter((product) => activeCategory === "All" || product.category === activeCategory);
+  const resultLabel = `${filteredProducts.length} product${filteredProducts.length === 1 ? "" : "s"} shown`;
 
   return (
     <main className="section-container section-spacing">
       <p className="eyebrow">Products</p>
       <h1 className="mt-4 text-4xl font-semibold md:text-6xl">Control components for marine and industrial use.</h1>
+      <p className="mt-4 max-w-3xl text-slate-300">
+        Select a category to review product families, then open a product card for technical notes and next-step contact.
+      </p>
 
       <div className="mt-10 flex flex-wrap gap-2">
         {categories.map((category) => (
@@ -48,6 +52,7 @@ export default async function ProductsPage({ searchParams }: ProductsPageProps) 
           </Link>
         ))}
       </div>
+      <p className="mt-4 text-sm text-slate-400">{resultLabel}</p>
 
       <div className="mt-8 grid gap-5 md:grid-cols-2">
         {filteredProducts.map((product) => {

@@ -4,8 +4,8 @@ export default function ContactPage() {
   return (
     <main className="section-container section-spacing">
       <p className="eyebrow">Contact</p>
-      <h1 className="mt-4 text-4xl font-semibold md:text-6xl">Contact Lilaas</h1>
-      <p className="mt-4 text-slate-300">For technical inquiries, contact our engineering team directly.</p>
+      <h1 className="mt-4 text-4xl font-semibold md:text-6xl">Talk to Engineering</h1>
+      <p className="mt-4 text-slate-300">For technical inquiries, quotations, and project discussion, contact the engineering team directly.</p>
 
       <div className="mt-10 grid gap-8 md:grid-cols-2">
         <section className="rounded-xl border border-cyan-700/30 bg-surface p-6">

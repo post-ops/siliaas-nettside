@@ -21,14 +21,20 @@ export function HomeLanding() {
           <div className="space-y-6">
             <p className="eyebrow">Industrial Control Systems</p>
             <h1 className="text-4xl font-semibold leading-tight md:text-6xl">
-              Control levers, joysticks and thruster control systems for marine and offshore operations
+              Type-approved control levers, joysticks and thruster control systems for marine and offshore operations
             </h1>
             <p className="max-w-2xl text-lg text-slate-300">
-              Built for precise control, high-load environments and long operational life.
+              Built for precise response, predictable operation and long lifecycle performance in high-duty installations.
             </p>
             <p className="text-sm text-slate-300">
               Used in commercial vessels, offshore operations and specialized industrial systems.
             </p>
+            <ul className="grid gap-2 text-sm text-slate-300 md:grid-cols-2">
+              <li>- DNV-aligned engineering approach</li>
+              <li>- Modular and integration-ready architecture</li>
+              <li>- Service life focus for continuous-duty operation</li>
+              <li>- Support from concept through commissioning</li>
+            </ul>
             <div className="flex flex-wrap gap-4">
               <Link href="/products" className="w-full md:w-auto text-center rounded-md bg-accent px-7 py-3.5 text-sm font-semibold text-white hover:bg-accentHover">
                 Explore Products
@@ -37,7 +43,7 @@ export function HomeLanding() {
                 Contact Engineering
               </Link>
             </div>
-            <p className="text-sm text-slate-300">ISO 9001 Certified • DNV-Aligned • Used in Global OEM Programs</p>
+            <p className="text-sm text-slate-300">ISO 9001 certified • DNV-aligned engineering • Used in global OEM programs</p>
           </div>
           <div className="overflow-hidden rounded-2xl border border-cyan-500/25 bg-surface shadow-card">
             <PremiumImage src="/images/bridge-control.jpg" alt="Bridge control system" variant="hero" priority />
