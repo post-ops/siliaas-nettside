@@ -14,8 +14,14 @@ const QUALITY = {
 
 const ASPECT = {
   hero: "aspect-[4/3] md:aspect-[16/10]",
-  product: "aspect-[5/3]",
+  product: "aspect-[16/10]",
   section: "aspect-[16/10]"
+} as const;
+
+const OBJECT_STYLE = {
+  hero: "object-cover object-center contrast-[1.03] saturate-[1.02]",
+  product: "object-contain object-center p-3",
+  section: "object-cover object-center contrast-[1.03] saturate-[1.02]"
 } as const;
 
 type PremiumImageProps = {
@@ -39,7 +45,7 @@ export function PremiumImage({ src, alt, variant, priority, className = "" }: Pr
         priority={priority}
         quality={QUALITY[variant]}
         sizes={SIZES[variant]}
-        className="object-cover object-center contrast-[1.03] saturate-[1.02]"
+        className={OBJECT_STYLE[variant]}
       />
     </div>
   );

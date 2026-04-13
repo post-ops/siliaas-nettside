@@ -40,7 +40,7 @@ export default function ProductsPage() {
                   <li key={spec}>{spec}</li>
                 ))}
               </ul>
-              <Link href={href} className="mt-4 inline-block text-sm text-link hover:text-linkHover">
+              <Link href={href} className="mt-4 inline-block text-sm font-medium text-link hover:text-linkHover">
                 {label}
               </Link>
             </article>
