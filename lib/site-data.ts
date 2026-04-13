@@ -15,7 +15,7 @@ export const products: ProductItem[] = [
   {
     slug: "lf120-control-lever",
     name: "LF120 Control Lever",
-    image: "/images/lilaas-lever.jpg",
+    image: "/images/curated/lf90x-lf120x.png",
     specs: ["5 kOhm potentiometer", "Handle movement +/-60 deg", "IP66 with panel plate"],
     whatItIs: "Control lever for single or double propulsion and thruster operation.",
     usedIn: "Bridge control, offshore control consoles and maneuvering stations.",
@@ -24,7 +24,7 @@ export const products: ProductItem[] = [
   {
     slug: "lf90-control-lever",
     name: "LF90 Control Lever",
-    image: "/images/lilaas-lever.jpg",
+    image: "/images/curated/steering-panels.png",
     specs: ["5 kOhm potentiometer", "IP66 enclosure with panel plate", "24V integrated scale light"],
     whatItIs: "Compact and robust multipurpose marine control lever.",
     usedIn: "Propulsion control, bow and stern thruster operation.",
@@ -33,7 +33,7 @@ export const products: ProductItem[] = [
   {
     slug: "lf150-rudder-unit",
     name: "LF150 Rudder Control Unit",
-    image: "/images/lilaas-lever.jpg",
+    image: "/images/curated/lf150.png",
     specs: ["Max turn up to 280 deg", "IP56 enclosure", "Approx. 3 kg net weight"],
     whatItIs: "Rudder control unit for electronic steering applications.",
     usedIn: "Marine steering stations and operator control desks.",
@@ -42,7 +42,7 @@ export const products: ProductItem[] = [
   {
     slug: "lf80-rudder-control",
     name: "LF80 Rudder Control",
-    image: "/images/lilaas-lever.jpg",
+    image: "/images/curated/lf80.png",
     specs: ["Single 5 kOhm potentiometer", "Detent in zero", "Panel plate 96 x 96 mm"],
     whatItIs: "Small and reliable control lever for rudder control.",
     usedIn: "Compact bridge panels and retrofit helm positions.",
@@ -50,11 +50,11 @@ export const products: ProductItem[] = [
   },
   {
     slug: "jx-marine-joystick",
-    name: "JX Marine Joystick",
-    image: "/images/lilaas-joystick.jpg",
-    specs: ["Dual-channel output", "High repeatability", "Marine-duty construction"],
-    whatItIs: "Joystick for vessel positioning and deck handling.",
-    usedIn: "Deck machinery, dynamic positioning and bridge control stations.",
+    name: "Marine Joystick Unit",
+    image: "/images/curated/joystick-concept.png",
+    specs: ["Dual-channel output", "Marine-duty construction", "Application-specific configuration"],
+    whatItIs: "Joystick-style control unit used for operator input.",
+    usedIn: "Deck machinery and bridge control stations (configuration dependent).",
     category: "Joysticks"
   },
   {
@@ -68,11 +68,11 @@ export const products: ProductItem[] = [
   },
   {
     slug: "precision-console-assembly",
-    name: "Precision Console Assembly",
-    image: "/images/lilaas-console.jpg",
-    specs: ["Precision mechanics", "Integration-ready build", "Long service life"],
-    whatItIs: "Operator console assembly with precision mechanics.",
-    usedIn: "Bridge control and integrated vessel systems.",
+    name: "Precision Mechanics Assembly",
+    image: "/images/curated/precision-mechanics.png",
+    specs: ["Precision mechanics", "Integration-ready build", "Design-to-spec production"],
+    whatItIs: "Precision mechanical assembly concept for operator interfaces.",
+    usedIn: "Bridge control and integrated vessel systems (project-specific).",
     category: "Precision Mechanics"
   }
 ];

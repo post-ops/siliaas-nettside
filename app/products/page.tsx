@@ -36,6 +36,9 @@ export default async function ProductsPage({ searchParams }: ProductsPageProps) 
       <p className="mt-4 max-w-3xl text-slate-300">
         Select a category to review product families, then open a product card for technical notes and next-step contact.
       </p>
+      <p className="mt-2 text-sm text-slate-400">
+        Verified against lilaas.no: LF80, LF90, LF120, LF150. Other entries are project references and require project-specific confirmation.
+      </p>
 
       <div className="mt-10 flex flex-wrap gap-2">
         {categories.map((category) => (
