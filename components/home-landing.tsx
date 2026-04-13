@@ -14,12 +14,6 @@ function productExploreLink(product: ProductItem) {
 
 export function HomeLanding() {
   const featuredProducts = products.slice(0, 4);
-  const trustPillars = [
-    "Engineering partner for marine OEM and integrators",
-    "Type-approved product families for demanding duty cycles",
-    "From concept and design support to commissioning",
-    "Service-first lifecycle mindset for long operational uptime"
-  ];
   const trustStats = [
     { label: "Product families", value: "15+" },
     { label: "Primary markets", value: "4" },
@@ -67,35 +61,47 @@ export function HomeLanding() {
   return (
     <main className="overflow-x-hidden">
       <section className="section-container section-spacing lively-section hero-ambient">
-        <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
-          <div className="space-y-6">
+        <div className="grid gap-10 lg:grid-cols-[1.2fr_0.8fr] lg:items-end">
+          <div className="space-y-7">
             <p className="eyebrow">Marine Control Expertise</p>
-            <h1 className="text-4xl font-semibold leading-tight md:text-6xl">
-              Premium control systems for vessels where reliability is non-negotiable
-            </h1>
+            <h1 className="text-4xl font-semibold leading-tight md:text-6xl">Control systems engineered for vessel operations that cannot fail</h1>
             <p className="max-w-2xl text-lg text-slate-300">
-              Lilaas delivers control units, integrated systems and engineering support for commercial marine, offshore and mission-critical applications.
+              Lilaas combines control units, integrated system design and lifecycle support to deliver stable operator response in mission-critical environments.
             </p>
-            <ul className="grid gap-2 text-sm text-slate-300 md:grid-cols-2">
-              {trustPillars.map((pillar) => (
-                <li key={pillar}>- {pillar}</li>
-              ))}
-            </ul>
             <div className="flex flex-wrap gap-4">
               <Link href="/contact" className="w-full md:w-auto text-center rounded-md bg-accent px-7 py-3.5 text-sm font-semibold text-white hover:bg-accentHover">
-                Request Engineering Consultation
+                Book Engineering Session
               </Link>
               <Link href="/products" className="w-full md:w-auto text-center rounded-md border border-cyan-700/35 px-6 py-3 text-sm font-medium text-slate-300 hover:border-accentMid/55">
-                Explore Product Portfolio
+                Explore Product Systems
               </Link>
             </div>
-            <p className="text-sm text-slate-300">ISO 9001 quality mindset • DNV-aligned engineering practice • Global marine programs</p>
+            <div className="grid gap-3 md:grid-cols-3">
+              <div className="rounded-lg border border-cyan-700/35 bg-surface/80 p-4">
+                <p className="text-xs uppercase tracking-[0.12em] text-slate-400">Built for</p>
+                <p className="mt-1 text-sm text-slate-200">Commercial and offshore fleets</p>
+              </div>
+              <div className="rounded-lg border border-cyan-700/35 bg-surface/80 p-4">
+                <p className="text-xs uppercase tracking-[0.12em] text-slate-400">Delivery model</p>
+                <p className="mt-1 text-sm text-slate-200">Concept to commissioning</p>
+              </div>
+              <div className="rounded-lg border border-cyan-700/35 bg-surface/80 p-4">
+                <p className="text-xs uppercase tracking-[0.12em] text-slate-400">Operating focus</p>
+                <p className="mt-1 text-sm text-slate-200">Uptime and predictable response</p>
+              </div>
+            </div>
           </div>
-          <div className="overflow-hidden rounded-2xl border border-cyan-500/25 bg-surface shadow-card">
-            <PremiumImage src="/images/bridge-control.jpg" alt="Bridge control system" variant="hero" priority />
-            <div className="border-t border-cyan-800/40 px-5 py-4 md:px-6 md:py-5">
-              <p className="text-xs text-slate-400">Bridge-installed control architecture for propulsion and maneuvering operations.</p>
-              <p className="mt-1 text-xs text-slate-400">Built for uptime in commercial marine and offshore environments.</p>
+          <div className="space-y-4">
+            <div className="overflow-hidden rounded-2xl border border-cyan-500/25 bg-surface shadow-card">
+              <PremiumImage src="/images/bridge-control.jpg" alt="Bridge control system" variant="hero" priority />
+              <div className="border-t border-cyan-800/40 px-5 py-4 md:px-6 md:py-5">
+                <p className="text-xs text-slate-400">Bridge-installed control architecture for propulsion and maneuvering operations.</p>
+                <p className="mt-1 text-xs text-slate-400">Engineered for uptime in demanding vessel programs.</p>
+              </div>
+            </div>
+            <div className="rounded-xl border border-cyan-700/35 bg-field p-4">
+              <p className="text-xs uppercase tracking-[0.12em] text-slate-400">Trust baseline</p>
+              <p className="mt-2 text-sm text-slate-300">ISO 9001 quality mindset • DNV-aligned engineering practice • Global marine programs</p>
             </div>
           </div>
         </div>
@@ -103,7 +109,7 @@ export function HomeLanding() {
 
       <section className="section-container section-spacing border-t border-cyan-800/35 lively-section band-surface">
         <p className="eyebrow">Trusted Delivery Model</p>
-        <h2 className="mt-4 text-3xl font-semibold md:text-5xl">Built for Critical Operations</h2>
+        <h2 className="mt-4 text-3xl font-semibold md:text-5xl">Built for Critical Operations, Not Generic Installations</h2>
         <div className="mt-8 grid gap-4 md:grid-cols-4">
           {trustStats.map((stat) => (
             <article key={stat.label} className="rounded-xl border border-cyan-700/30 bg-surface p-6">
@@ -116,7 +122,7 @@ export function HomeLanding() {
 
       <section className="section-container section-spacing border-t border-cyan-800/35 lively-section">
         <p className="eyebrow">Solutions</p>
-        <h2 className="mt-4 text-3xl font-semibold md:text-5xl">Control Units, Systems and Service in One Delivery Chain</h2>
+        <h2 className="mt-4 text-3xl font-semibold md:text-5xl">One Engineering Chain: Units, Systems and Lifecycle Service</h2>
         <div className="mt-8 grid gap-4 md:grid-cols-3 lively-grid">
           {solutionColumns.map((column, index) => (
             <article
@@ -135,14 +141,44 @@ export function HomeLanding() {
       </section>
 
       <section className="section-container section-spacing border-t border-cyan-800/35 lively-section">
-        <p className="eyebrow">Featured Products</p>
-        <h2 className="mt-4 text-3xl font-semibold md:text-5xl">Selected Systems and Control Units</h2>
-        <div className="mt-10 grid gap-6 md:grid-cols-2">
+        <p className="eyebrow">Flagship Product Families</p>
+        <h2 className="mt-4 text-3xl font-semibold md:text-5xl">Built Around Operator Confidence</h2>
+        <div className="mt-10 grid gap-6 lg:grid-cols-[1.1fr_0.9fr]">
+          <article className="rounded-2xl border border-cyan-700/30 bg-surface p-6">
+            <h3 className="text-2xl font-semibold">System fit first, model selection second</h3>
+            <p className="mt-4 text-slate-300">
+              Start from vessel profile, control architecture and duty cycle, then select the lever or joystick family that provides stable maneuvering and maintainable integration.
+            </p>
+            <ul className="mt-4 space-y-2 text-sm text-slate-300">
+              <li>- Control behavior tuned to operational context</li>
+              <li>- Hardware and interface options aligned with bridge layout</li>
+              <li>- Clear path from specification to commissioning support</li>
+            </ul>
+            <Link href="/products" className="mt-6 inline-block rounded-md bg-accent px-6 py-3 text-sm font-semibold text-white hover:bg-accentHover">
+              Compare Product Families
+            </Link>
+          </article>
+          <div className="grid gap-4">
+            {featuredProducts.slice(0, 2).map((product) => {
+              const { href, label } = productExploreLink(product);
+              return (
+                <article key={product.name} className="rounded-xl border border-cyan-700/30 bg-surface p-5 transition hover:scale-[1.01] hover:border-accentMid/55">
+                  <PremiumImage src={product.image} alt={product.name} variant="product" />
+                  <h3 className="mt-4 text-xl font-semibold">{product.name}</h3>
+                  <p className="mt-2 text-sm text-slate-300">{product.whatItIs}</p>
+                  <Link href={href} className="mt-3 inline-block text-sm text-link hover:text-linkHover">
+                    {label}
+                  </Link>
+                </article>
+              );
+            })}
+          </div>
+        </div>
+        <div className="mt-6 grid gap-6 md:grid-cols-2">
           {featuredProducts.map((product) => {
             const { href, label } = productExploreLink(product);
             return (
-              <article key={product.name} className="rounded-xl border border-cyan-700/30 bg-surface p-5 transition hover:scale-[1.02] hover:border-accentMid/55">
-                <PremiumImage src={product.image} alt={product.name} variant="product" />
+              <article key={`${product.name}-details`} className="rounded-xl border border-cyan-700/30 bg-surface p-5 transition hover:scale-[1.01] hover:border-accentMid/55">
                 <h3 className="mt-4 text-xl font-semibold">{product.name}</h3>
                 <p className="mt-3 text-sm text-slate-300">{product.whatItIs}</p>
                 <p className="mt-2 text-sm text-slate-400">Used in {product.usedIn}</p>
@@ -159,15 +195,12 @@ export function HomeLanding() {
           })}
         </div>
         <p className="mt-8 text-sm text-slate-300">{KEY_DATA_LINE}</p>
-        <Link href="/products" className="mt-8 inline-block w-full md:w-auto rounded-md bg-accent px-6 py-3 text-center text-sm font-semibold text-white hover:bg-accentHover">
-          Compare Product Families
-        </Link>
       </section>
 
       <section className="section-container section-spacing border-t border-cyan-800/35 lively-section band-surface">
         <p className="eyebrow">Proof</p>
-        <h2 className="mt-4 text-3xl font-semibold md:text-5xl">Measured Results in Real Delivery Programs</h2>
-        <div className="mt-8 grid gap-4 md:grid-cols-3">
+        <h2 className="mt-4 text-3xl font-semibold md:text-5xl">Measured Results, Not Marketing Claims</h2>
+        <div className="mt-8 grid gap-4 md:grid-cols-3 lively-grid">
           {highlightedCases.map((item) => (
             <article key={item.title} className="rounded-xl border border-cyan-700/30 bg-surface p-6">
               <h3 className="text-xl font-semibold">{item.title}</h3>
@@ -184,7 +217,7 @@ export function HomeLanding() {
 
       <section className="section-container section-spacing border-t border-cyan-800/35 lively-section">
         <p className="eyebrow">Application Areas</p>
-        <h2 className="mt-4 text-3xl font-semibold md:text-5xl">Where Our Systems Are Used</h2>
+        <h2 className="mt-4 text-3xl font-semibold md:text-5xl">Where Control Reliability Is Business-Critical</h2>
         <div className="mt-8 grid gap-4 md:grid-cols-2">
           {applicationAreas.map((area) => (
             <article key={area.title} className="rounded-xl border border-cyan-700/30 bg-surface p-6">
@@ -221,7 +254,7 @@ export function HomeLanding() {
 
       <section className="section-container section-spacing border-t border-cyan-800/35 lively-section">
         <p className="eyebrow">Specialist Support</p>
-        <h2 className="mt-4 text-3xl font-semibold md:text-5xl">Talk to a Marine Control Specialist</h2>
+        <h2 className="mt-4 text-3xl font-semibold md:text-5xl">Talk to a Marine Control Specialist, Not a Generic Sales Queue</h2>
         <p className="mt-4 text-slate-300">From first concept to commissioning, our engineering team helps you define the right control solution and delivery plan.</p>
         <div className="mt-8 grid gap-6 md:grid-cols-2">
           <div className="rounded-xl border border-cyan-700/30 bg-surface p-6">
