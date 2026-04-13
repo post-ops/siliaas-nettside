@@ -2,7 +2,7 @@ import Link from "next/link";
 import { ContactForm } from "@/components/contact-form";
 import { PremiumImage } from "@/components/premium-image";
 import type { ProductItem } from "@/lib/site-data";
-import { applicationAreas, imageLibrary, KEY_DATA_LINE, products } from "@/lib/site-data";
+import { applicationAreas, KEY_DATA_LINE, products } from "@/lib/site-data";
 
 function productExploreLink(product: ProductItem) {
   if (product.category === "Thruster Control") {
@@ -13,7 +13,6 @@ function productExploreLink(product: ProductItem) {
 
 export function HomeLanding() {
   const featuredProducts = products.slice(0, 4);
-  const galleryPreview = imageLibrary.slice(0, 6);
 
   return (
     <main className="overflow-x-hidden">
@@ -117,7 +116,6 @@ export function HomeLanding() {
         <div className="mt-8 grid gap-4 md:grid-cols-2">
           {applicationAreas.map((area) => (
             <article key={area.title} className="rounded-xl border border-cyan-700/30 bg-surface p-6">
-              <PremiumImage src={area.image} alt={`${area.title} environment`} variant="section" />
               <h3 className="text-xl font-semibold">{area.title}</h3>
               <p className="mt-3 text-sm text-slate-300">{area.whatItIs}</p>
               <p className="mt-2 text-sm text-slate-400">Used in {area.usedIn}</p>
@@ -172,27 +170,6 @@ export function HomeLanding() {
         </div>
       </section>
 
-      <section className="section-container section-spacing border-t border-cyan-800/35">
-        <p className="eyebrow">Image Archive</p>
-        <h2 className="mt-4 text-3xl font-semibold md:text-5xl">Extended Product Gallery</h2>
-        <p className="mt-4 max-w-3xl text-slate-300">
-          Full image collection with all uploaded references is available in the media library.
-        </p>
-        <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {galleryPreview.map((image) => (
-            <article key={image.src} className="rounded-xl border border-cyan-700/30 bg-surface p-4">
-              <PremiumImage src={image.src} alt={image.title} variant="product" />
-              <p className="mt-3 text-sm text-slate-300">{image.title}</p>
-            </article>
-          ))}
-        </div>
-        <Link
-          href="/gallery"
-          className="mt-8 inline-block w-full rounded-md bg-accent px-6 py-3 text-center text-sm font-semibold text-white hover:bg-accentHover md:w-auto"
-        >
-          Open Media Library
-        </Link>
-      </section>
     </main>
   );
 }
