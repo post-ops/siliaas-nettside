@@ -38,15 +38,13 @@ export function HomeLanding() {
             </div>
           </div>
           <div className="space-y-4">
-            <div className="hero-image-live relative overflow-hidden rounded-2xl border border-slate-500/30 bg-surface shadow-card">
-              <div className="boat-spin-ring" />
-              <div className="hero-orbit" />
-              <div className="hero-orbit-fast" />
-              <div className="hero-orbit-slow" />
-              <PremiumImage src="/images/bridge-control.jpg" alt="Bridge control system" variant="hero" priority />
-              <div className="border-t border-slate-600/40 px-5 py-4 md:px-6 md:py-5">
-                <p className="text-xs text-slate-400">Bridge-installed control architecture for propulsion and maneuvering operations.</p>
-                <p className="mt-1 text-xs text-slate-400">Engineered for uptime in demanding vessel programs.</p>
+            <div className="hero-circle-shell">
+              <div className="hero-circle-track" />
+              <div className="hero-circle-track hero-circle-track-reverse" />
+              <div className="hero-circle-image-wrap">
+                <div className="hero-circle-image">
+                  <PremiumImage src="/images/bridge-control.jpg" alt="Bridge control system" variant="hero" priority />
+                </div>
               </div>
             </div>
             <div className="rounded-xl border border-slate-600/35 bg-field/70 p-4">
