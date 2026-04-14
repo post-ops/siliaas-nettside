@@ -485,3 +485,49 @@ footer a:hover::after {
     transition: none !important;
   }
 }
+
+/* Calm variant: keep premium look, reduce motion intensity */
+.calm-mode body::before {
+  animation-duration: 42s;
+  opacity: 0.28;
+}
+
+.calm-mode h1,
+.calm-mode h2,
+.calm-mode h3,
+.calm-mode .lively-section,
+.calm-mode .lively-grid > *,
+.calm-mode .signal-marquee,
+.calm-mode .hero-image-live::after,
+.calm-mode .hero-image-live .premium-image-frame img,
+.calm-mode .info-panel::before,
+.calm-mode .info-panel::after,
+.calm-mode .hero-orbit,
+.calm-mode .hero-orbit-fast,
+.calm-mode .hero-orbit-slow,
+.calm-mode .live-dot,
+.calm-mode .cta-primary,
+.calm-mode .cta-secondary {
+  animation: none !important;
+}
+
+.calm-mode .info-panel {
+  transform: none !important;
+  transition: border-color 220ms ease, box-shadow 220ms ease;
+}
+
+.calm-mode .info-panel:hover {
+  transform: translateY(-3px) !important;
+  box-shadow:
+    0 16px 26px -20px rgba(2, 14, 24, 0.72),
+    0 0 0 1px rgba(251, 146, 60, 0.28) !important;
+}
+
+.calm-mode .premium-image-frame:hover {
+  transform: translateY(-2px) !important;
+}
+
+.calm-mode .premium-image-frame:hover img {
+  transform: scale(1.03) !important;
+  filter: saturate(1.06) contrast(1.04) brightness(1.02) !important;
+}
