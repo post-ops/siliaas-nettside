@@ -47,8 +47,8 @@ export default async function ProductsPage({ searchParams }: ProductsPageProps) 
             href={category === "All" ? "/products" : `/products?category=${encodeURIComponent(category)}`}
             className={`rounded-full border px-4 py-1.5 text-sm transition ${
               activeCategory === category
-                ? "border-accent bg-accent/20 text-cyan-100"
-                : "border-cyan-700/30 bg-field/90 text-slate-300 hover:border-accentMid/55"
+                ? "border-accent bg-accent/25 text-orange-50 shadow-[0_0_18px_rgba(249,115,22,0.35)]"
+                : "border-orange-400/30 bg-field/90 text-slate-200 hover:border-accentMid/80"
             }`}
           >
             {category}
@@ -81,7 +81,7 @@ export default async function ProductsPage({ searchParams }: ProductsPageProps) 
                   <li key={spec}>{spec}</li>
                 ))}
               </ul>
-              <details className="mt-4 rounded-md border border-cyan-800/35 bg-field/70 p-3 text-sm text-slate-300">
+              <details className="mt-4 rounded-md border border-orange-400/35 bg-field/70 p-3 text-sm text-slate-200">
                 <summary className="cursor-pointer font-medium text-accentSoft">Read Technical Notes</summary>
                 <p className="mt-2 text-slate-300">
                   {product.name} is configured for {product.usedIn.toLowerCase()}
