@@ -477,6 +477,14 @@ footer a:hover::after {
   animation: menuDrop 220ms ease both;
 }
 
+/* Keep the site visually plain with no motion effects. */
+*,
+*::before,
+*::after {
+  animation: none !important;
+  transition: none !important;
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
