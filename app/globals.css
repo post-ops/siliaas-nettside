@@ -477,6 +477,28 @@ footer a:hover::after {
   animation: menuDrop 220ms ease both;
 }
 
+/* Medium mode: keep subtle interaction, remove constant motion. */
+body::before,
+h1,
+h2,
+h3,
+.info-panel,
+.info-panel::before,
+.info-panel::after,
+.cta-primary,
+.cta-secondary,
+.lively-section,
+.lively-grid > *,
+.signal-marquee,
+.hero-orbit,
+.hero-orbit-fast,
+.hero-orbit-slow,
+.hero-image-live .premium-image-frame img,
+.hero-image-live::after,
+.live-dot {
+  animation: none !important;
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
