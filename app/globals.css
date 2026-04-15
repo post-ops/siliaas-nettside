@@ -477,6 +477,33 @@ footer a:hover::after {
   animation: menuDrop 220ms ease both;
 }
 
+/* Disco mode: extra energetic motion and color shifts. */
+body::before,
+.hero-ambient::before,
+.info-panel,
+.info-panel::before,
+.info-panel::after,
+.signal-marquee,
+.hero-orbit,
+.hero-orbit-fast,
+.hero-orbit-slow,
+.hero-image-live .premium-image-frame img,
+.hero-image-live::after,
+.live-dot,
+.cta-primary,
+.cta-secondary {
+  animation-duration: 0.35s !important;
+  animation-timing-function: linear !important;
+}
+
+.hero-image-live,
+.premium-image-frame,
+.info-panel,
+.cta-primary,
+.cta-secondary {
+  filter: saturate(1.35) contrast(1.12) hue-rotate(22deg);
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
